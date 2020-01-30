@@ -1,1 +1,1 @@
-KEY = 'test'
+KEY = 'test2'
