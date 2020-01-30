@@ -1,4 +1,10 @@
+from keys import KEY
+from airportweather import getWeatherFromCoord
 
 
 
-print('Test weather API')
+
+Lat='40'
+Long='-74'
+zz = getWeatherFromCoord(Lat,Long,32)
+print(zz)
