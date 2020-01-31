@@ -1,5 +1,5 @@
 import pytest
-from airportweather import getWeatherFromCoord,CodeToCoord
+from airportweather import *
 
 
 def test_getWeatherFromCoord_lat():
@@ -13,6 +13,16 @@ def test_getWeatherFromCoord_long():
 def test_getWeatherFromCoord_string():
 	assert getWeatherFromCoord('a','z')==False
 
+def test_getPastWeatherCoord_lat():
+	with pytest.raises(ValueError):
+		getPastWeather('100','50')
+
+def test_getPastWeather_long():
+	with pytest.raises(ValueError):
+		getPastWeather('10','500')
+
+def test_getPastWeather_string():
+	assert getPastWeather('a','z')==False
 
 def test_CodeToCoord():
 	latitude,longitude = CodeToCoord('90MO')
