@@ -16,6 +16,16 @@ airportList = []
 
 
 def getWeatherFromCoord(Lat,Long):
+	try:
+		int(Lat)
+	except ValueError:
+		return False
+
+	try:
+		int(Long)
+	except ValueError:
+		return False
+
 	if ( (int)(Lat)>90 or (int)(Lat)<-90) or ( (int)(Long)<-180 or (int)(Long)>80 ) :
 		raise ValueError('Latitude should be between -90 and 90, Longitude should be between -180 and 80')
 
