@@ -14,7 +14,13 @@ airportList = []
 
 
 
-def getWeatherFromCoord(Lat,Long,apikey):
+def getWeatherFromCoord(Lat,Long):
+	if ( (int)(Lat)>90 or (int)(Lat)<-90) or ( (int)(Long)<-180 or (int)(Long)>80 ) :
+		raise ValueError('Latitude should be between -90 and 90, Longitude should be between -180 and 80')
+
+
+	#check correct Lat
+	#check correct Long
 	address = 'http://api.openweathermap.org/data/2.5/weather?lat='
 	url = address+Lat+'&lon='+Long+'&appid='+KEY
 	json_data= requests.get(url).json()
