@@ -1,6 +1,7 @@
 import csv
 import requests #for gets
-from keys import KEY #gets openweathermap api key
+#from keys import KEY  #gets openweathermap api key
+KEY = '813e77b87c63fbeb6328993f99b3f844'
 
 class airport:
 	id = 000
