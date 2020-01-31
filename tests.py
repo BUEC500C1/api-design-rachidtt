@@ -1,4 +1,6 @@
+import pytest
 from airportweather import getWeatherFromCoord
+
 
 def test_getWeatherFromCoord():
 	with pytest.raises(ValueError):
