@@ -1,31 +1,12 @@
-from keys import KEY
+#Example of how to use the API:
 from airportweather import *
 
 
-'''
-Lat='40'
-Long='74'
-temp,conditions = getWeatherFromCoord(Lat,Long)
+myAirport = '00A'
 
-latitude, longitude = CodeToCoord('00A')
-#print(latitude)
-#print(longitude)
-#print(conditions)
+fahrentemp=getAirportWeather(myAirport) #get current temperature of airport
+conditions=getAirportConditions(myAirport) #get current conditions of airport
+print(fahrentemp,conditions)
 
-temp_arr = []
-conditions_arr =[]
-temp_arr,conditions_arr = getPastWeather(Lat,Long)
-#print(temp_arr)
-#print(conditions_arr)
-#print(temp)
-#plotData(temp_arr,conditions_arr)'''
+temperatures_arr, conditions_arr = getPastData(myAirport,True)#plots temperature of the past 12 hours, also returns temperature and conditions of past 12h 
 
-'''
-fahrentemp=getAirportWeather('00A')
-print(fahrentemp)
-'''
-
-fahrentemp=getAirportWeather('00A')
-conditions=getAirportConditions('00A')
-print(fahrentemp)
-print(conditions)

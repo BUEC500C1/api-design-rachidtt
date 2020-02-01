@@ -101,28 +101,18 @@ def plotData(temperatures_arr,conditions_arr):
 
 def getAirportWeather(code):
 	Lat,Long = CodeToCoord(code)
-	try:
-		float(Lat)
-	except ValueError:
-		return False
-
-	try:
-		float(Long)
-	except ValueError:
-		return False
 	fahrentemp, conditions = getWeatherFromCoord(Lat,Long)
 	return fahrentemp
 
 def getAirportConditions(code):
 	Lat,Long = CodeToCoord(code)
-	try:
-		float(Lat)
-	except ValueError:
-		return False
-
-	try:
-		float(Long)
-	except ValueError:
-		return False
 	fahrentemp, conditions = getWeatherFromCoord(Lat,Long)
 	return conditions
+
+
+def getPastData(code,Plotbool):
+	Lat,Long = CodeToCoord(code)
+	temperatures_arr, conditions_arr = getPastWeather(Lat,Long)
+	if(Plotbool):
+		plotData(temperatures_arr,conditions_arr)
+	return temperatures_arr, conditions_arr
