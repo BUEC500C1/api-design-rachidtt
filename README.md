@@ -21,9 +21,10 @@ The API allows you to get current and past weather conditions by entering the Ai
 
 ### Features
 
-getAirportWeather(code)
-getAirportConditions(code)
-getPastData(code,Plotbool)
+getAirportWeather(code): returns the current temperature in Fahrenheit, of the airport given the Code
+getAirportConditions(code): returns the current description of the condition in Fahrenheit, of the airport given the Code
+getPastData(code,Plotbool): returns lists of past temperatures and conditions of the last 12 hours, and plots the data if you pass True
+
 
 ### Instructions 
 
@@ -48,9 +49,6 @@ conditions=getAirportConditions(myAirport)
 temperatures_arr, conditions_arr = getPastData(myAirport,True)
 ```
 
-GetAirportWeather returns the current temperature in Fahrenheit, of the airport given the Code
-GetAirportWeather returns the current description of the condition in Fahrenheit, of the airport given the Code
-getPastData returns arrays of past temperatures and conditions of the last 12 hours, and plots the data if you pass True
 
 
 ### Files
